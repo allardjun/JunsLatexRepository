@@ -1,0 +1,32 @@
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+
+# LaTeX intermediate files
+*.bbl
+*.blg
+*.synctex.gz
+
+# LaTeX generated files
+#*.pdf need figures!!
+*.dvi
+
+# LaTeX editor files
+*.swp
+*.synctex(busy)
+*.synctex.gz(busy)
+*.fdb_latexmk
+*.fls
+
+# LaTeX project-specific files
+*.tex.backup
+*.tex.bak
+*.tex~ 
+
+# Ignore build directories
+_build/
+
+# Ignore DS_Store files
+.DS_Store
