@@ -15,7 +15,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add main.pdf
+          git add *.pdf
           git commit -m "Update compiled PDF" -a || echo "No changes to commit"
       - name: Push changes
         uses: ad-m/github-push-action@master
