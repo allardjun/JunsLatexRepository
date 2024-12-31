@@ -1,3 +1,11 @@
+## --- MacOS ---
+
+# Ignore DS_Store files
+.DS_Store
+**/.DS_Store
+
+## --- Latex ---
+
 # LaTeX build files
 *.aux
 *.log
@@ -9,25 +17,25 @@
 *.blg
 *.synctex.gz
 
-# LaTeX generated files
-#*.pdf need figures!!
-*.dvi
-
 # LaTeX editor files
-*.swp
 *.synctex(busy)
 *.synctex.gz(busy)
 *.fdb_latexmk
 *.fls
 
-# LaTeX project-specific files
-*.tex.backup
-*.tex.bak
-*.tex~ 
+## --- python ---
 
-# Ignore build directories
-_build/
+# Python cache files
+__pycache__/
+*.pyc
 
-# Ignore DS_Store files
-.DS_Store
-**/.DS_Store
+# Python environment files
+venv/
+
+## --- MS Office ---
+
+# MS Office temporary files
+~$*
+
+
+
