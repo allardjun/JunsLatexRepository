@@ -33,9 +33,9 @@ __pycache__/
 venv/
 
 ## --- MS Office ---
-
-# MS Office temporary files
 ~$*
 
+## --- vscode ---
+.vscode/
 
 
