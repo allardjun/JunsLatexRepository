@@ -1,4 +1,4 @@
-% This is the template Jun uses for project seeds
+% This is the template Jun uses for papers
 % jun.allard@uci.edu allardlab.com
 \documentclass[onecolumn,11pt]{article}
 
@@ -15,7 +15,6 @@
 \DeclareSIUnit{\million}{\text{million}}
 \DeclareSIUnit{\Units}{\text{Units}}
 \DeclareSIUnit{\cells}{\text{cells}}
-\DeclareSIUnit{\well}{\text{well}}
 \DeclareSIUnit\Molar{\mole\per\cubic\deci\metre}
 \DeclareSIUnit\Molar{\textsc{m}}
 \newcommand{\uM}{\si{\micro\Molar}}
@@ -53,6 +52,7 @@
 
 
 % --------- packages, less often used ---------
+% It's good to keep these commented out until you need them, to reduce compilation time.
 %\usepackage[export]{adjustbox}
 %\usepackage{amsopn}
 %\usepackage{cancel} % adds strikethrough
@@ -71,8 +71,8 @@
 %\usepackage{tcolorbox}
 %\usepackage[normalem]{ulem} % for underlining
 % --------- for typesetting code blocks --------
-%\usepackage{algorithmic} % for code including Matlab
-%\usepackage{listings} % for code including Matlab
+%\usepackage{algorithmic} % for code 
+%\usepackage{listings} % for code 
 %\usepackage[numbered,framed,basicstyle]{matlab-prettifier}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -146,9 +146,8 @@ Nothing here yet
 
 
 
-\section{Project seed}
+\section*{Introduction}
 
-\subsection*{Summary}
 \paragraph{Background/major question} \lipsum[2]
 \paragraph{Specific question, puzzle or hypothesis}\lipsum[2]
 \paragraph{Here we}\lipsum[2]
@@ -165,7 +164,7 @@ Nothing here yet
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Candidate titles}
+\subsection*{Candidate titles}
  
 \begin{itemize}
 \item Predictive dynamic modeling connects timescales of day-to-day gene expression and decade-scale disease progression of Alzheimer's Disease using $\mathbb{C}^\star$ algebras
@@ -176,32 +175,34 @@ Nothing here yet
 \item Universal model that achieves both zero bias and zero variance between training sets
 \end{itemize}
 
-\subsection*{Basic model} 
-
-\lipsum[2-5]  
-
-\subsection*{Reading}
-Papers marked with $^{\bullet}$ are of notable interest.
-\begin{itemize}
-\item Primarily modeling: \citet{Slaughter.2013}, \citet{Zhang.2019}, \citet{Ohadi.2019}
-\item Review articles on the system \cite{kajdlkjsadjkl}
-\item Primarily experimental
-\end{itemize}
+\subsection*{Literature}
+Primarily modeling: \citet{Miller.2018}, \citet{Wilhelm.2003}. 
+Some examples of textual citation where we talk about the work of \citet{Miller.2018}, versus parenthetical citation where we mention a fact \cite{Miller.2018}. 
 
 
-\subsection*{First steps} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage % Remove before submission. 
+\section*{Results} 
 
-Test dimensions. 
+
+\subsection*{An active sentence about this result, which roughly corresponds to Figure~\ref{fig:majorfig}} 
+
+
+Cool latex tricks for physical units: Test dimensions. 
 Dimensional analysis. Pull the other cell with \SI{10}{\pico\newton\per\second}. Deviatoric stress \SI{7e3}{\pascal}. Inside a math environment $R=\SI{120}{\micro\meter}$. 
 Something in inverse microMolar $10\uM^{-1}$, and force in $10\pN$ and distance in either $10\um$ or $10\nm$
 
+Cool trick for figure referencing: We should be able to reference Figure~\ref{subfig:heatmap} and Figure~\ref{subfig:lattice} separately.
 
-\subsection{Figure subreferencing}
+We can also refer to supplemental figures like Figure~\ref{fig:DetailedJeanJacketSchematic}.
+Note about figure size: for many journals, the best and/or required sizes are either 8.5cm or 17cm.
+Try to make the size in Illustrator and latex (in \verb|includegraphics|) match. 
+However, slightly-shrunken 165mm looks a bit better in latex.
 
 \begin{figure}[!ht]
         \centering
         \begin{subcaptiongroup}
-                \includegraphics[width=174mm]{figures/figJeanJacket.pdf}
+                \includegraphics[width=165mm]{figures/figJeanJacket.pdf}
                 \phantomcaption\label{subfig:heatmap}
                 \phantomcaption\label{subfig:lattice}
                 \end{subcaptiongroup}
@@ -212,11 +213,27 @@ Something in inverse microMolar $10\uM^{-1}$, and force in $10\pN$ and distance 
                 }
 \end{figure}
 
-We should be able to reference Figure~\ref{subfig:heatmap} and Figure~\ref{subfig:lattice} separately.
+\lipsum[2]  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage % Remove before submission. 
+\subsection*{Active sentence about the 2nd logical unit of results, roughly corresponding to Figure~\ref{fig:2ndresult}}
+
+\lipsum[2-4]  
+\begin{figure}[!ht]
+        \centering
+        \includegraphics[width=165mm]{figures/figJeanJacket.pdf}
+        \caption{\label{fig:2ndresult}\textbf{Interpretation sentence.}
+               The second logical unit of results, which will naturally lead to the third, and so on.
+                }
+\end{figure}
+\lipsum[5-6]  
+
 
 % Bibliography
-%\bibliography{jeanjacket}
-\bibliography{literature_jun_tmp}
+\bibliography{jeanjacket_jun.bib}
+% You can include multiple .bib files, so leave "_jun" and make a "_yourname.bib" file.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -229,15 +246,15 @@ We should be able to reference Figure~\ref{subfig:heatmap} and Figure~\ref{subfi
 \renewcommand{\listfigurename}{List of Supporting Figures}
 \renewcommand{\contentsname}{List of Supporting Text}
 
-%\section{Supplemental material}
+\section{Supplemental material}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{figure}[h!t]
-%\centering
-%\includegraphics[width=4.5in]{figJeanJacket.pdf}
-%\caption{This is a supplemental figure}
-%\label{fig:DetailedJeanJacketSchematic}
-%\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h!t]
+\centering
+\includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
+\caption{This is a supplemental figure}
+\label{fig:DetailedJeanJacketSchematic}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
