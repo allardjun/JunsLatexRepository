@@ -41,6 +41,8 @@ venv/
 ~$*
 
 ## --- vscode ---
-.vscode/
+.vscode/**
+!tasks.json
+
 
 

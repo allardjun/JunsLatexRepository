@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "get bibtex",
+        "type": "shell",
+        "command": "mv",
+        "args": [
+          "~/Desktop/JeanJacket.bib",
+          ".",
+        ],
+        "problemMatcher": []
+      },
+    ]
+  }
+    
