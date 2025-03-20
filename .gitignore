@@ -23,6 +23,11 @@
 *.fdb_latexmk
 *.fls
 
+## --- Jupyter ---
+
+# Jupyter notebook checkpoints
+**/.ipynb_checkpoints/
+
 ## --- python ---
 
 # Python cache files
