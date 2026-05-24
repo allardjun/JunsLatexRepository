@@ -11,3 +11,17 @@ Simple minimal latex file we use for project seeds and papers.
 * There is a GitHub action to compile in a GitHub container, contained in `.github`. You may wish to omit this for your project.
 
 * Latex/bibtex can handle multiple `.bib` files. For collaborative projects, I recommend each auther makes their own `_myname.bib`. Duplicates will cause problems, but we can fix this at the very end.  
+
+
+
+
+# Commands
+
+To create a new project seed:
+
+```sh
+
+$TEXPARENT=../int/tex/ # (Jun's folder organization)
+cat .gitignore >> paper/.gitignore
+cp -R paper $TEXPARENT/cool_new_project
+```
