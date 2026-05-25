@@ -22,6 +22,6 @@ To create a new project seed:
 ```sh
 
 $TEXPARENT=../int/tex/ # (Jun's folder organization)
-cat .gitignore >> paper/.gitignore
+cat .gitignore >> paper/.gitignore # FIX -- not idempotent
 cp -R paper $TEXPARENT/cool_new_project
 ```
